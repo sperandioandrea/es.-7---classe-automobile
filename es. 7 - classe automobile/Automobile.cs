@@ -13,7 +13,14 @@ namespace es._7___classe_automobile.Properties
         private int marcia;
         private bool motoreAcceso;
 
-        //costruttori
+        //costruttore
+        public Automobile()
+        {
+            velocità= 0;
+            marcia= 0;
+            motoreAcceso= false;
+        }
+        //metodi get e set
         public int Velocità
         {
             get { return velocità; }

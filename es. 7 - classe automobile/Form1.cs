@@ -17,62 +17,73 @@ namespace es._7___classe_automobile
         public Form1()
         {
             InitializeComponent();
-            Automobile auto = new Automobile();
+            auto = new Automobile();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            auto.Velocità = 10;
-            auto.Marcia = 1;
-            auto.MotoreAcceso = true;
+          
         }
 
 
         //BOTTONE ACCENSIONE
         private void button1_Click(object sender, EventArgs e)
         {
+            bool accensione = auto.MotoreAcceso;
             auto.AccendiMotore();
             listView1.Items.Clear();
-            listView1.Items.Add("Motore acceso");
+            listView1.Items.Add("MOTORE ACCESO " + accensione);
         }
         //BOTTONE SPEGNIMENTO
         private void button2_Click(object sender, EventArgs e)
         {
+            bool spegnimento = auto.MotoreAcceso;
             auto.SpegniMotore();
             listView1.Items.Clear();
-            listView1.Items.Add("Motore spento");
+            listView1.Items.Add("MOTORE SPENTO " + spegnimento);
         }
       
+
+
+
         
         //BOTTONE VELOCITA' +
         private void button3_Click(object sender, EventArgs e)
         {
+            int acc = auto.Velocità;
             auto.Accellerare();
             listView1.Items.Clear();
-            listView1.Items.Add("Velocità:");
+            listView1.Items.Add("VELOCITA': " + acc + " k/h");
         }
         //BOTTONE VELOCITA' -
         private void button4_Click(object sender, EventArgs e)
         {
+            int dec = auto.Velocità;
             auto.Decelerare();
             listView1.Items.Clear();
-            listView1.Items.Add("Velocità:");
+            listView1.Items.Add("VELOCITA':" + dec + " k/h");
         }
+
+
+
 
 
         //MARCIA +
         private void button5_Click(object sender, EventArgs e)
         {
+            int marciaP = auto.Marcia;
             auto.AumentaMarcia();
             listView1.Items.Clear();
-            listView1.Items.Add("Marcia:");
+            listView1.Items.Add("SEI IN MARCIA:  " + marciaP);
         }
         //MARCIA -
         private void button6_Click(object sender, EventArgs e)
         {
+            int marciaM = auto.Marcia;
             auto.DiminuzioneMarcia();
             listView1.Items.Clear();
-            listView1.Items.Add("Marcia:");
+            listView1.Items.Add("SEI IN MARCIA: " + marciaM);
         }
+
     }
 }
