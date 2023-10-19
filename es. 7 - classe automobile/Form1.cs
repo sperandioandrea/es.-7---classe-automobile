@@ -1,12 +1,5 @@
 ﻿using es._7___classe_automobile.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace es._7___classe_automobile
@@ -71,18 +64,16 @@ namespace es._7___classe_automobile
         //MARCIA +
         private void button5_Click(object sender, EventArgs e)
         {
-            int marciaP = auto.Marcia;
             auto.AumentaMarcia();
             listView1.Items.Clear();
-            listView1.Items.Add("SEI IN MARCIA:  " + marciaP);
+            listView1.Items.Add("SEI IN MARCIA:  " + auto.Marcia);
         }
         //MARCIA -
         private void button6_Click(object sender, EventArgs e)
         {
-            int marciaM = auto.Marcia;
             auto.DiminuzioneMarcia();
             listView1.Items.Clear();
-            listView1.Items.Add("SEI IN MARCIA: " + marciaM);
+            listView1.Items.Add("SEI IN MARCIA: " + auto.Marcia);
         }
 
     }
