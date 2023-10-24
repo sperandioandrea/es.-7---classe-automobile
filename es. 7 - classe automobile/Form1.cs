@@ -38,8 +38,6 @@ namespace es._7___classe_automobile
         }
       
 
-
-
         
         //BOTTONE VELOCITA' +
         private void button3_Click(object sender, EventArgs e)
@@ -57,7 +55,6 @@ namespace es._7___classe_automobile
             listView1.Items.Clear();
             listView1.Items.Add("VELOCITA':" + dec + " k/h");
         }
-
 
 
 
