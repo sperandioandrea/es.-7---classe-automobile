@@ -8,5 +8,6 @@ namespace es._7___classe_automobile
 {
     internal class AutomobileCambioautomatico
     {
+
     }
 }
