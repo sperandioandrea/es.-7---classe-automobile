@@ -15,7 +15,7 @@ namespace es._7___classe_automobile
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+
         }
 
 
@@ -34,6 +34,7 @@ namespace es._7___classe_automobile
             auto.SpegniMotore();
             listView1.Items.Clear();
             listView1.Items.Add("MOTORE SPENTO " + spegnimento);
+            
         }
       
 
