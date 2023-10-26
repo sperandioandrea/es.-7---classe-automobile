@@ -7,9 +7,9 @@ namespace es._7___classe_automobile.Properties
     class Automobile
     {
         //attributi
-        private int velocità;
-        private int marcia;
-        private bool motoreAcceso;
+        protected int velocità;
+        protected int marcia;
+        protected bool motoreAcceso;
 
         //costruttore
         public Automobile()
@@ -79,49 +79,8 @@ namespace es._7___classe_automobile.Properties
                 marcia--;
             }
         }
-
-        //AUMENTO E DIMINUZIONE MARCIA CAMBIO AUTOMATICO
-        public void AggiornaMarcia()
-        {
-            if (velocità < 20)
-            {
-                marcia = 1;
-            }
-            else if (velocità >= 20 && velocità < 40)
-            {
-                marcia = 2;
-            }
-            else if (velocità >= 40 && velocità < 60)
-            {
-                marcia = 3;
-            }
-            else if (velocità >= 60 && velocità < 100)
-            {
-                marcia = 4;
-            }
-            else
-            {
-                marcia = 5;
-            }
-        }
-
-        public int GetVelocita()
-        {
-            return velocità;
-        }
-
-        public int GetMarcia()
-        {
-            return marcia;
-        }
-
     }
-
 }
-//Classe derivata
-class AutomobileCambioautomatico : Automobile 
-{
 
-}
 
 

@@ -7,10 +7,12 @@ namespace es._7___classe_automobile
     public partial class Form1 : Form
     {
         Automobile auto;
+        AutomobileCambioautomatico cambio; //classe derivata
         public Form1()
         {
             InitializeComponent();
             auto = new Automobile();
+            cambio = new AutomobileCambioautomatico(); //classe derivata
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,19 +73,21 @@ namespace es._7___classe_automobile
             listView1.Items.Add("SEI IN MARCIA: " + auto.Marcia);
         }
 
-        //MARCIA + AUTOMATICO
+        //MARCIA + AUTOMATICO (classe derivata)
         private void button7_Click(object sender, EventArgs e)
         {
-            auto.AggiornaMarcia();
+            cambio.AggiornaMarcia();
+            cambio.GetMarcia();
+            cambio.GetVelocita();
             listView1.Items.Clear();
-            listView1.Items.Add("SEI IN MARCIA: " + auto.Marcia);
+            listView1.Items.Add("SEI IN MARCIA: " + cambio.Marcia);
         }
         //MARCIA - AUTOMATICO
         private void button8_Click(object sender, EventArgs e)
         {
-            auto.AggiornaMarcia();
+            cambio.AggiornaMarcia();
             listView1.Items.Clear();
-            listView1.Items.Add("SEI IN MARCIA: " + auto.Marcia);
+            listView1.Items.Add("SEI IN MARCIA: " + cambio.Marcia);
         }
     }
 }
